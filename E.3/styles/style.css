@@ -1,0 +1,79 @@
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav" 
+    "sidebar main main main"
+    "sidebar c1 c2 c3"
+    "sidebar footer footer footer";
+    grid-gap: 0.3rem;
+}
+
+nav{
+    background: #a7ffeb;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+main {
+    background: #48ffff;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#sidebar {
+    background: #18ffff;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#c1 {
+    grid-area: c1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#c2 {
+    background: #64ffda;
+    grid-area: c2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#c3 {
+    background: #73ffba;
+    grid-area: c3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+footer {
+    background: #1de9b6;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width: 375px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+            "nav"
+            "sidebar"
+            "main"
+            "c1"
+            "c2"
+            "c3"
+            "footer";
+    }
+}
