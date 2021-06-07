@@ -16,6 +16,7 @@
                     var w = container.clientWidth;
                     var h = container.clientHeight;
                     renderer.setSize( w,h);
+                    renderer.setPixelRatio(devicePixelRatio);
                     container.appendChild(renderer.domElement);
 
                     //camera
